@@ -1,4 +1,5 @@
 /examen_evaluacion_env
 *ipynb
 /data
-/code/__pycache__
+/__pycache__/
+*pyc
