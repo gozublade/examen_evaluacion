@@ -4,7 +4,7 @@ def leer_datos(path):
     Luego corrige el tipo de la variable TS'''
     df = pd.read_csv(path)
     df['TS']=pd.to_datetime(df['TS'])
-    medias(df)
+    return df
 
 
 def medias(df)->str:

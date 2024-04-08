@@ -4,7 +4,8 @@ from funciones import leer_datos, medias
 
 path ='../data/datos_examen.csv'
 def main():
-    leer_datos(path)
+    df=leer_datos(path)
+    medias(df)
     
     
 if __name__ =='__main__':
