@@ -7,11 +7,11 @@ def leer_datos(path):
     return df
 
 
-def medias(df)->str:
+def medias(df,alumno)->str:
     '''A partir del data frame que se realizo antes, se crea una lista de elementos unicos y se tranforma en una lista
     luego se realiza un filtro por cada elemento de la lista y se imprime el promedio de cada alumno'''
-    lista= df['Tag'].unique().tolist()
-    for i in lista:
-        data_filter = df[df['Tag'] == i]
-        med=(data_filter['Value'].mean())
-        print(f'La media de {i} es {med}')
+    #lista= df['Tag'].unique().tolist()
+    #for i in lista:
+    data_filter = df[df['Tag'] == f'Examen_{alumno}']
+    med=(data_filter['Value'].mean())
+    print(f'La media del alumno {alumno} es {med}')
